@@ -1,0 +1,47 @@
+It is good to always control your cluster from another node or environment different from where the 
+cluster is located by creating another node or server in any platform like aws and then install kubectl
+inside the node via cli.
+Also install aws cli in the node with its corrspond prerequisite like java, vim, zip, git, etc as show below.
+Finally you can now create a .kube/config file in the new node  by mkdir .kube and then  vi .kube/config
+Finally copy the kubeconfig file (in your rancher ) or amy other k8s cluster you like and paste the content inside 
+the config file you created in the new node.
+when you run  kubectl get nodes, you will see that k8s cluster can now be accessed via this new node.
+
+# Step 1 - Download the Kubectl binary
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/releas
+
+#Step 2 - Make the Kubectl binary executable
+chmod +x kubectl
+
+
+Do you want to install Kubernetes' command-line tool Kubectl on Ubuntu 22.04 but are unsure how?
+
+This guide will show you how to install Kubectl on Ubuntu 22.04, which will enable you to interact with or execute commands on Kubernetes clusters. By the end of this guide, you should have Kubectl installed on your system.
+
+#What is Kubectl?
+Before going on to how to install Kubectl on your Ubuntu system, you need to understand what it is and why it is required. Kubectl is a command-line interface (CLI) tool for interacting with Kubernetes clusters. It enables efficient control and management of Kubernetes resources.
+
+With Kubectl, you can deploy applications, inspect and update cluster resources at will, scale deployments, and even troubleshoot issues that surface. Consider Kubectl your bridge, seamlessly connecting you to your Kubernetes cluster, making it easy to issue commands and retrieve information.
+
+#step 1
+
+# install AWS CLI, unzip, wget
+sudo apt update -y
+sudo apt install unzip wget -y
+sudo curl https://s3.amazonaws.com/aws-cli/awscli-bundle.zip -o awscli-bundle.zip
+sudo apt install unzip python -y
+sudo unzip awscli-bundle.zip
+sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
+
+#Step 2 - Download the Kubectl binary
+
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+
+#Step 3 - Make the Kubectl binary executable
+
+chmod +x kubectl
+
+
+#Step 4 - Move Kubectl binary to PATH and the kubectl is fianlly installed in your new node.
+
+sudo mv kubectl /usr/local/bin

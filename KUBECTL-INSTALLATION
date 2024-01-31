@@ -7,22 +7,6 @@ Finally copy the kubeconfig file (in your rancher ) or amy other k8s cluster you
 the config file you created in the new node.
 when you run  kubectl get nodes, you will see that k8s cluster can now be accessed via this new node.
 
-# Step 1 - Download the Kubectl binary
-curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/releas
-
-#Step 2 - Make the Kubectl binary executable
-chmod +x kubectl
-
-
-Do you want to install Kubernetes' command-line tool Kubectl on Ubuntu 22.04 but are unsure how?
-
-This guide will show you how to install Kubectl on Ubuntu 22.04, which will enable you to interact with or execute commands on Kubernetes clusters. By the end of this guide, you should have Kubectl installed on your system.
-
-#What is Kubectl?
-Before going on to how to install Kubectl on your Ubuntu system, you need to understand what it is and why it is required. Kubectl is a command-line interface (CLI) tool for interacting with Kubernetes clusters. It enables efficient control and management of Kubernetes resources.
-
-With Kubectl, you can deploy applications, inspect and update cluster resources at will, scale deployments, and even troubleshoot issues that surface. Consider Kubectl your bridge, seamlessly connecting you to your Kubernetes cluster, making it easy to issue commands and retrieve information.
-
 #step 1
 
 # install AWS CLI, unzip, wget
